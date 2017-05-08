@@ -1,9 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+ <md-toolbar class="toolbar-top">
+  <span>Guidebook</span>
+  <span class="example-spacer"></span>
+  <button md-button class="toolbar-btn" routerLink="/explore" routerLinkActive="active">Explore</button>
+  <button md-button class="toolbar-btn" routerLink="/create" routerLinkActive="active">Create</button>
+  <button md-button class="toolbar-btn" routerLink="/about" routerLinkActive="active">About</button>
+ </md-toolbar>
 
-<div [froalaEditor] [(froalaModel)]="editorContent"></div>
+ <router-outlet></router-outlet>
 
-<div [froalaView]="editorContent"></div>
-
-<p> {{editorContent}}</p>

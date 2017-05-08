@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public editorContent: string = 'My Document\'s Title';
-  title = 'app works!!!!';
+ 
 }

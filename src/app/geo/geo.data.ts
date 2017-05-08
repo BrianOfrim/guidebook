@@ -1,5 +1,10 @@
+import {Geo} from './geo'
 
-export const COUNTRIES = [
+export const COUNTRIES: string[] = [
+    "United States", "Canada" , "Australia", "Mexico", "Great Britain", "New Zealand"
+]
+
+export const GEO_INFO: Geo[] = [
 {"name":"Alabama","country":"United States"},
 {"name":"Alaska","country":"United States"},
 {"name":"Arizona","country":"United States"},
@@ -7,7 +12,7 @@ export const COUNTRIES = [
 {"name":"California","country":"United States"},
 {"name":"Colorado","country":"United States"},
 {"name":"Connecticut","country":"United States"},
-{"name":"District of Columbia","alt":["Washington DC","Washington D.C."],"country":"United States"},
+{"name":"District of Columbia","country":"United States"},
 {"name":"Delaware","country":"United States"},
 {"name":"Florida","country":"United States"},
 {"name":"Georgia","country":"United States"},
@@ -62,7 +67,7 @@ export const COUNTRIES = [
 {"name":"British Columbia","country":"Canada"},
 {"name":"Manitoba","country":"Canada"},
 {"name":"New Brunswick","country":"Canada"},
-{"name":"Newfoundland and Labrador","country":"Canada","alt":["Newfoundland","Labrador"]},
+{"name":"Newfoundland and Labrador","country":"Canada"},
 {"name":"Nova Scotia","country":"Canada"},
 {"name":"Nunavut","country":"Canada"},
 {"name":"Northwest Territories","country":"Canada"},
@@ -121,7 +126,7 @@ export const COUNTRIES = [
 {"name":"Tlaxcala","country":"Mexico"},
 {"name":"Veracruz","country":"Mexico"},
 {"name":"Yucatán","country":"Mexico"},
-{"name":"Zacatecas","short":"ZA","alt":["ZAC"],"country":"Mexico"},
+{"name":"Zacatecas","country":"Mexico"},
 
 
 { "name": "Avon", "country": "Great Britain" },

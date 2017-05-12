@@ -4,6 +4,11 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule }   from '@angular/router';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { NgUploaderModule } from 'ngx-uploader';
+
 
 import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
 // import {MdButtonModule, MdCheckboxModule, MdToolbarModule,MdAutocompleteModule,MdInputModule} from '@angular/material';
@@ -33,12 +38,10 @@ import { AppRoutingModule } from './app-routing.module';
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
     BrowserAnimationsModule,
-    // MdButtonModule,
-    // MdCheckboxModule,
-    // MdToolbarModule,
-    // MdAutocompleteModule,
-    // MdInputModule
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    NgUploaderModule
   ],
   providers: [GeoService],
   bootstrap: [AppComponent]

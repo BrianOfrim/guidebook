@@ -8,7 +8,8 @@ export class GeoService {
     getCountries(): string[]{
         return COUNTRIES;
     }
-    getRegions(requested_country: String): Geo[]{
-        return GEO_INFO.filter(x => x.country == requested_country);
+    getRegions(requested_country: String): string[]{
+        var filteredRegions = GEO_INFO.filter(x => x.country == requested_country);
+        return filteredRegions.map(x => x.name);
     }
 }

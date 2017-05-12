@@ -1,7 +1,66 @@
+<form class = "topform">
+  <md-select placeholder="Country" [(ngModel)]="selectedCountry" name="country">
+    <md-option *ngFor="let country of countries"  [value]="country">
+      {{ country }}
+    </md-option>
+  </md-select>
+
+
+  <md-select placeholder="Region" [(ngModel)]="selectedProvince" name="province">
+      <md-option *ngFor="let province of getProvinces()"  [value]="province">
+        {{ province}}
+      </md-option>
+  </md-select>
+
+    <md-select  placeholder="Activity" [(ngModel)]="selectedActivity" name="activity">
+        <md-option *ngFor="let activity of activities"  [value]="activity">
+          {{ activity }}
+        </md-option>
+    </md-select>
+
+  <md-input-container>
+    <input mdInput placeholder="Location" name="location" [(ngModel)]="locationVal">
+  </md-input-container>
+
+</form>
+
+<p><span class = "titles">Quick Summary:</span></p>
+
+<div>
+  <textarea class = "summaryBox" name="Text1"  rows="5"></textarea>
+</div>
+
+<p><span class = "titles">Body:</span></p>
+
 <div [froalaEditor] [(froalaModel)]="editorContent"></div>
 
 <div [froalaView]="editorContent"></div>
 
 <p> {{editorContent}}</p>
 
-<button md-raised-button>Raised button</button>
+<p><span class = "titles">Thumbnail Image::</span></p>
+<div style="width:100%">  
+  <div class="drop-container" ngFileDrop (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+    <span class = "titles">Drag & Drop</span>
+  </div>
+</div>
+
+<div class = "outerFileChoose">
+    <input class ="inner" type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+</div>
+
+<p><span class = "titles">Additional Files:</span></p>
+<div style="width:100%">  
+  <div class="drop-container" ngFileDrop (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+    <span class = "titles">Drag & Drop</span>
+  </div>
+</div>
+
+<div class = "outerFileChoose">
+    <input class ="inner" type="file" ngFileSelect (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
+</div>
+
+<button  md-raised-button>or choose files()</button>
+
+<button md-raised-button>Submit</button>
+

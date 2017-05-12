@@ -7,6 +7,12 @@
 }
 
 .toolbar-top{
-    border-bottom: 4px solid #1e88e5;
+    /*border-bottom: 4px solid #1e88e5;*/
+    border-bottom: 4px solid #2196F3;
     margin-bottom: 20px;
+    background-color: white;
+}
+
+.mainTitle{
+    font-size: 30px;
 }
